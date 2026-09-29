@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <title>PS5-Relapse</title>
+  <style>
+    html, body {
+      margin: 0;
+      width: 100%;
+      min-height: 100%;
+      background: #060606 url("./assets/background.png") center center / cover fixed no-repeat;
+      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      box-sizing: border-box;
+      padding: 24px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    #console {
+      width: min(1100px, 100%);
+      max-height: 42vh;
+      overflow-y: auto;
+      box-sizing: border-box;
+      padding: 18px 22px;
+      border: 1px solid rgba(30, 140, 255, 0.75);
+      border-radius: 14px;
+      background: rgba(0, 5, 15, 0.78);
+      box-shadow: 0 0 28px rgba(0, 100, 255, 0.35), inset 0 0 24px rgba(0, 70, 180, 0.12);
+      backdrop-filter: blur(3px);
+      -webkit-backdrop-filter: blur(3px);
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 15px;
+      line-height: 1.55;
+    }
+
+    #console > div {
+      margin: 2px 0;
+      overflow-wrap: anywhere;
+    }
+
+    @media (max-width: 700px) {
+      body { padding: 12px; align-items: flex-end; }
+      #console { max-height: 50vh; padding: 14px; font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+  <div id="console"></div>
+  <script src="./src/firmware.js"></script>
+  <script src="./src/main.js"></script>
+  <script src="./src/rop.js"></script>
+  <script src="./src/utils/syscalls.js"></script>
+  <script type="module" src="./src/site.js"></script>
+</body>
+</html>
